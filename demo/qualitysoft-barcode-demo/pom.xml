@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>de.qualitysoft.barcode.demo</groupId>
+  <artifactId>qualitysoft-barcode-demo</artifactId>
+  <version>6.0.0</version>
+  <properties>
+    <maven.compiler.release>11</maven.compiler.release>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <qualitysoft.barcode.version>6.0.0</qualitysoft.barcode.version>
+  </properties>
+  <repositories>
+    <repository>
+      <id>central</id>
+      <name>Maven Central</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+  <dependencies>
+    <dependency>
+      <groupId>de.qualitysoft.barcode</groupId>
+      <artifactId>qualitysoft-barcode</artifactId>
+      <version>${qualitysoft.barcode.version}</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.5.0</version>
+        <configuration>
+          <mainClass>de.qualitysoft.barcode.demo.BarcodeDemo</mainClass>
+          <classpathScope>runtime</classpathScope>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -60,6 +60,21 @@ is used by default by Maven and Gradle builds.
 Product page, pricing and documentation:
 `https://qualitysoft.de/products/qs-barcode-sdk/`
 
+## Demo
+
+This repository includes a small Java demo that consumes the published Maven
+Central package instead of local SDK sources:
+
+```powershell
+mvn -f demo/qualitysoft-barcode-demo/pom.xml `
+  "-Dmaven.repo.local=artifacts/maven-demo-central-cache" `
+  -U compile exec:java `
+  "-Dexec.args=path/to/input.pdf --license path/to/qsbc.lic"
+```
+
+Omit `--license` to run with the native runtime's default license search and
+demo/evaluation behavior.
+
 ## Quick Start
 
 ```java
