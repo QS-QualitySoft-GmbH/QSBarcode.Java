@@ -1,0 +1,12 @@
+.settings/
+.classpath
+.project
+bin/
+target/
+*.class
+*.jar
+*.asc
+*.lic
+native/*/
+!native/README.md
+artifacts/
