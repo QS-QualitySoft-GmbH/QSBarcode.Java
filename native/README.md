@@ -1,9 +1,14 @@
 # Native Runtime Assets
 
-Release builds place the signed native QS Barcode runtime assets here before
-packaging the all-in-one Maven artifact.
+The public source repository keeps this directory as a placeholder only.
+Runtime binaries are not committed to Git.
 
-Expected layout:
+Official Maven packages include the matching QS Barcode native runtime assets
+for the supported desktop/server platforms. Local source builds that need native
+smoke tests can place runtime files under `native/<rid>/` or use the
+`qualitysoft.barcode.native.path` JVM property.
+
+Expected local layout:
 
 ```text
 native/
@@ -22,6 +27,3 @@ native/
   osx-arm64/libqs_barcode_loader_sdk.dylib
   osx-arm64/libpdfium.dylib
 ```
-
-The public repository intentionally does not store runtime binaries. The release
-build injects signed assets before packaging.
