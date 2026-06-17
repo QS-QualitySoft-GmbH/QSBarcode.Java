@@ -11,6 +11,9 @@ The SDK is distributed as a Maven package:
 de.qualitysoft.barcode:qualitysoft-barcode:6.0.0
 ```
 
+Version `6.0.0` is published on Maven Central:
+`https://repo1.maven.org/maven2/de/qualitysoft/barcode/qualitysoft-barcode/6.0.0/`
+
 ## What It Does
 
 The QS Barcode engine is built for document and image based barcode recognition
@@ -50,6 +53,9 @@ implementation("de.qualitysoft.barcode:qualitysoft-barcode:6.0.0")
 The official JAR contains the Java wrapper and the native runtime assets for
 the supported desktop/server platforms. At runtime the SDK loads the matching
 platform runtime automatically.
+
+No custom Maven repository is required for the published release; Maven Central
+is used by default by Maven and Gradle builds.
 
 Product page, pricing and documentation:
 `https://qualitysoft.de/products/qs-barcode-sdk/`
